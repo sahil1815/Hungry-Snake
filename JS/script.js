@@ -147,15 +147,14 @@ const endGame = () => {
     // Delay alert slightly to allow the UI to update before blocking execution
     setTimeout(() => {
         alert(`Game Over! Your Score: ${score}`);
-
+    }, 300);
+    
         speed = 10;
         score = 0;
         ScoreBox.textContent = `Score: ${score}`;
 
         snakeArr = [{ x: 10, y: 15 }];
         snakeDirection = { x: 0, y: 0 };
-
-    }, 300);
 };
 
 
