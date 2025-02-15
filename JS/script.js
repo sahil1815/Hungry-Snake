@@ -141,17 +141,21 @@ let collisionToGameOver = () => {
 
 
 //End the Game
-let showScore = score;
+const endGame = () => {
+    gameOverSound.play();
+
+    // Delay alert slightly to allow the UI to update before blocking execution
+    let showScore = score;
     setTimeout(() => {
         alert(`Game Over! Your Score: ${showScore}`);
     }, 300);
-    
-        speed = 10;
-        score = 0;
-        ScoreBox.textContent = `Score: ${score}`;
 
-        snakeArr = [{ x: 10, y: 15 }];
-        snakeDirection = { x: 0, y: 0 };
+    speed = 10;
+    score = 0;
+    ScoreBox.textContent = `Score: ${score}`;
+
+    snakeArr = [{ x: 10, y: 15 }];
+    snakeDirection = { x: 0, y: 0 };
 };
 
 
