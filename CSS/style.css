@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url("../imgs/bgg.jpg") no-repeat center center/cover;
+}
+
+.startGame {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#new-game,
+#reset-game {
+    background-color: #FB4141;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#new-game:hover,
+#reset-game:hover {
+    background-color: #d72323;
+}
+
+/* Score Display */
+.scores {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    top: 20px;
+    right: 30px;
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1vw;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Game Container - Increased Size */
+.container {
+    width: 92vmin;
+    height: 92vmin;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Game Box */
+.game-box {
+    width: 93%;
+    height: 93%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+}
+
+.snakeHead {
+    background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+    border: 2px solid rgb(34, 4, 34);
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snakeBody {
+    background: linear-gradient(rgb(250, 42, 42), rgb(146, 142, 29));
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food {
+    background: linear-gradient(red, purple);
+    border: .25vmin solid black;
+    border-radius: 8px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Mobile Buttons */
+.mobileBtn {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.mobileBtn button {
+    background-color: #FB4141;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mobileBtn button:hover {
+    background-color: #d72323;
+}
+
+.left-right-buttons {
+    display: flex;
+    gap: 20px;
+    /* Space between left and right buttons */
+}
+
+/* Show mobile buttons only on smaller screens */
+@media (max-width: 768px) {
+    .mobileBtn {
+        display: flex;
+        /* Show buttons on mobile */
+    }
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+
+    .scores {
+        position: relative;
+        font-size: 4vw;
+        right: auto;
+        top: auto;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 96vmin;
+        height: 96vmin;
+        border-width: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scores {
+        font-size: 5vw;
+        padding: 2vw;
+    }
+
+    .container {
+        width: 98vmin;
+        height: 98vmin;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hungry Snake</title>
+  </head>
+  <body>
+    <div class="startGame hide">
+      <button id="new-game">New Game</button>
+      <button id="reset-game">Reset Game</button>
+    </div>
+    <div class="body hide">
+      <div class="scores">
+        <span class="score">Score: 0</span>
+        <span class="Hscore">High Score: 0</span>
+      </div>
+
+      <div class="container">
+        <div class="game-box"></div>
+      </div>
+
+      <!-- Mobile Buttons Below the Game Box -->
+      <div class="mobileBtn">
+        <button id="up-btn">&#8593;</button>
+        <div class="left-right-buttons">
+          <button id="left-btn">&#8592;</button>
+          <button id="right-btn">&#8594;</button>
+        </div>
+        <button id="down-btn">&#8595;</button>
+      </div>
+    </div>
+    <script src="JS/script.js"></script>
+  </body>
+</html>
