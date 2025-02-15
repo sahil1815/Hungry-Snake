@@ -141,12 +141,9 @@ let collisionToGameOver = () => {
 
 
 //End the Game
-const endGame = () => {
-    gameOverSound.play();
-
-    // Delay alert slightly to allow the UI to update before blocking execution
+let showScore = score;
     setTimeout(() => {
-        alert(`Game Over! Your Score: ${score}`);
+        alert(`Game Over! Your Score: ${showScore}`);
     }, 300);
     
         speed = 10;
