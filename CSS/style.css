@@ -87,7 +87,7 @@ body {
 }
 
 .snakeBody {
-    background: linear-gradient(rgb(250, 42, 42), rgb(146, 142, 29));
+    background: purple;
     border: .25vmin solid white;
     border-radius: 12px;
 }
