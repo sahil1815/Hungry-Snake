@@ -155,7 +155,7 @@ const endGame = () => {
         snakeArr = [{ x: 10, y: 15 }];
         snakeDirection = { x: 0, y: 0 };
 
-    }, 100);
+    }, 300);
 };
 
 
