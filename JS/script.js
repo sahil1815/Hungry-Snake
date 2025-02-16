@@ -150,7 +150,7 @@ const endGame = () => {
         alert(`Game Over! Your Score: ${showScore}`);
     }, 300);
 
-    speed = 10;
+    speed = 6;
     score = 0;
     ScoreBox.textContent = `Score: ${score}`;
 
