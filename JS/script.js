@@ -36,7 +36,7 @@ resetGame.addEventListener("click", () => {
     HiScoreBox.textContent = `High Score: ${hiScore}`;
 });
 
-let speed = 10;
+let speed = 6;
 let lastPaintTime = 0;
 
 //Game Function
@@ -54,13 +54,13 @@ const gameFun = (currentTime) => {
 
 //Increase Snake Speed
 let speedIncrease = () => {
-    if (score >= 40) speed = 27;
-    else if (score >= 35) speed = 25;
-    else if (score >= 30) speed = 22;
+    if (score >= 40) speed = 30;
+    else if (score >= 35) speed = 27;
+    else if (score >= 30) speed = 23;
     else if (score >= 25) speed = 20;
     else if (score >= 20) speed = 17;
-    else if (score >= 15) speed = 15;
-    else if (score >= 10) speed = 12;
+    else if (score >= 15) speed = 13;
+    else if (score >= 10) speed = 9;
 };
 
 //Render Food & Sanke
